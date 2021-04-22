@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="sv">
+    <head>
+        <title>Gravitationstest</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+        <script src="script.js"></script>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div class="container">
+            <div class="row mb-5">
+                <div class="col" id="display">
+                    <div id="earth"><img src="img/earth.png" alt="Jorden"></div>
+                    <div id="spaceship"><img src="img/spaceship.png" alt="Rymdskepp"></div>
+                    <div id="moon"><img src="img/moon.png" alt="Månen"></div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <hr>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <div class="form-group">
+                        <label for="distance-slider">Rymdskeppets avstånd från jorden (m)</label>
+                        <input type="range" id="distance-slider" class="form-control-range" min="1">
+                        <input type="number" id="distance" class="form-control">
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <h4>Kraft från jorden</h4>
+                    <p>F=<span id="force-earth"></span></p>
+                </div>
+                <div class="col">
+                    <h4>Kraft från månen</h4>
+                    <p>F=<span id="force-moon"></span></p>
+                </div>
+            </div>
+            <div class="row mt-5">
+                <div class="col">
+                    <div class="accordion" id="information-container">
+                        <div class="card">
+                            <div class="card-header">
+                                <h4 class="mb-0">
+                                    <button class="btn btn-link" data-toggle="collapse" data-target="#information">Information</button>
+                                </h4>
+                            </div>
+                            <div class="collapse" id="information" data-parent="#information-container">
+                                <div class="card-body">
+                                    <p>Rymdskeppets massa: 1000 kg</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
